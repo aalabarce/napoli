@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SHIELD - Free Bootstrap 3 Theme">
-    <meta name="author" content="Carlos Alvarez - Alvarez.is - blacktie.co">
+    <meta name="description" content="Hielo Freskito - Napoli">
+    <meta name="author" content="Hielo Freskito - Napoli ">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
     <title> Hielo Freskito || San Juan, Argentina</title>
@@ -15,7 +15,7 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/icomoon.css">
-    <link href="assets/css/animate-custom.css" rel="stylesheet">
+    <link href="http://cervezanauta.com.ar/assets/css/plugins/animate.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
 
 
@@ -28,15 +28,26 @@
 	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
 	<script src="assets/js/parallax.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.scrollUp.min.js"></script>
-    
+	<script type="text/javascript" src="http://cervezanauta.com.ar/assets/js/plugins/wow/wow.min.js"></script>
+
     <script type="text/javascript">
+    var isPhoneDevice = "ontouchstart" in document.documentElement;
     $(document).ready(function(){
       $('.slider-productos').slick({
       		autoplay: true,
       });
 
-      $.scrollUp({
+      if (isPhoneDevice) {
+	        //mobile
+	    } else {
+	        //desktop               
+	        // Initialize WOW.js
+	        wow = new WOW({
+	            offset: 50
+	        })
+	        wow.init();
+	    }
+      /*$.scrollUp({
 		    scrollName: 'scrollUp', // Element ID
 		    topDistance: '300', // Distance from top before showing element (px)
 		    topSpeed: 300, // Speed back to top (ms)
@@ -45,7 +56,7 @@
 		    animationOutSpeed: 200, // Animation out speed (ms)
 		    scrollText: 'Scroll to top', // Text for element
 		    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
-	  });
+	  });*/
     });
   </script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -56,7 +67,7 @@
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-  
+  	
   
   	<div id="navbar-main">
       <!-- Fixed navbar -->
@@ -84,12 +95,12 @@
 	    <div id="headerwrap" name="headerwrap">
 			<header class="clearfix">
 					<img src="assets/img/logo_transparente.png" class="logo-slider">
-	  		 		<p class="slogan">Elaborado con el agua mas pura</p>
+	  		 		<p class="slogan wow fadeIn">Elaborado con el agua mas pura</p>
 	  		</header>	    
 	    </div><!-- /headerwrap -->
 
 		<!-- ==== GREYWRAP ==== -->
-		<div class="greywrap">
+		<div class="greywrap wow fadeIn">
 			<div class="row">
 				<div class="col-lg-4 callout">
 					<span class="icon icon-cogs"></span>
@@ -112,7 +123,7 @@
 		</div><!-- greywrap -->
 		
 		<!-- ==== ABOUT ==== -->
-		<div class="container" id="historia" name="historia">
+		<div class="container wow fadeIn" id="historia" name="historia">
 			<div class="row white">
 			<br>
 				<h1 class="centered">HISTORIA</h1>
@@ -132,7 +143,7 @@ Hoy el frigor&iacute;fico brinda a sus clientes un servicio profesional y de alt
 		</div><!-- container -->
 		
 		<!-- ==== TEAM MEMBERS ==== -->
-		<div class="container" id="productos" class="productos" name="productos">
+		<div class="container wow fadeIn" id="productos" class="productos" name="productos">
 		<br>
 		<div class="row white centered">
 				<h1 class="centered">PRODUCTOS</h1>
@@ -208,7 +219,7 @@ Hoy el frigor&iacute;fico brinda a sus clientes un servicio profesional y de alt
 		
 		<!-- ==== SECTION DIVIDER1 --> 
 		<section class="section-divider textdivider parallax-window" data-parallax="scroll" data-image-src="assets/img/bg/divider1.jpg">
-			<div class="container">
+			<div class="container wow fadeIn">
 				<h1>HORARIOS</h1>
 				<hr>
 				<p>Todos los d&iacute;as las 24hs, los 365 d&iacute;as del a&ntilde;o.</p>
@@ -217,7 +228,7 @@ Hoy el frigor&iacute;fico brinda a sus clientes un servicio profesional y de alt
 		
 		
 		<!-- ==== SERVICES ==== -->
-		<div class="container" id="calidad" name="calidad">
+		<div class="container wow fadeIn" id="calidad" name="calidad">
 			<br>
 			<br>
 			<div class="row">
@@ -229,7 +240,7 @@ Hoy el frigor&iacute;fico brinda a sus clientes un servicio profesional y de alt
 					</p>
 				</div><!-- col-lg -->
 			</div><!-- row -->
-			<div class="container" id="politicas" name="politicas">
+			<div class="container wow fadeIn" id="politicas" name="politicas">
 				<br>
 				<br>
 				<div class="row">
@@ -263,7 +274,7 @@ Hoy el frigor&iacute;fico brinda a sus clientes un servicio profesional y de alt
 
 		<!-- ==== GREYWRAP ==== -->
 		<div class="greywrap" id="clientes" name="clientes">
-			<div class="container">
+			<div class="container wow fadeIn">
 				<div class="row">
 					<div class="col-lg-8 centered clientes">
 						<h2 class="wtit">Clientes</h2>
@@ -365,14 +376,14 @@ Hoy el frigor&iacute;fico brinda a sus clientes un servicio profesional y de alt
 		
 		<!-- ==== SECTION DIVIDER6 ==== -->
 		<section class="section-divider textdivider divider6">
-			<div class="container">
+			<div class="container wow fadeIn">
 				<h1>SAN JUAN, ARGENTINA</h1>
 				<hr>
 				<p>Hielo Freskito</p>
 			</div><!-- container -->
 		</section><!-- section -->
 		
-		<div class="container" id="contact" name="contact">
+		<div class="container wow fadeIn" id="contact" name="contact">
 			<div class="row">
 			<br>
 				<h1 class="centered">GRACIAS POR VISITARNOS</h1>
