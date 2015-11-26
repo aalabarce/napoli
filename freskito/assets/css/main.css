@@ -652,7 +652,7 @@ a:after {
      SLIDER PRODUCTOS
    ========================================================================== */
 .slider-productos {
-    text-align: left;   
+    text-align: center;   
 }
 
 .slick-prev, .slick-next {
