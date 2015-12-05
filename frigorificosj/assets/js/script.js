@@ -49,10 +49,10 @@ $(document).ready(function () {
 
         if (introWidth > introHeight) {
 
-            bgImage.css({
+            /*bgImage.css({
                 width: '100%',
                 height: 'auto'
-            });
+            });*/
             menuBgImages.css({
                 width: '100%',
                 height: 'auto'
@@ -60,10 +60,10 @@ $(document).ready(function () {
 
         } else {
 
-            bgImage.css({
+            /*bgImage.css({
                 width: 'auto',
                 height: '100%'
-            });
+            });*/
             menuBgImages.css({
                 width: 'auto',
                 height: '100%'
