@@ -277,7 +277,7 @@ h1 {font-family: 'Open Sans'; font-weight: normal; font-style: normal; font-size
 
 #divFooter {font-family: 'Open Sans', sans-serif; background-color: rgb(18, 18, 18); color: rgb(180, 173, 173); padding-top: 32px; line-height: 23px; font-size: 12px; text-transform: none; background-image: url(backgrounds/noisy_net.png); background-repeat: repeat repeat;}
 
-#divFooter a {color: rgb(132, 164, 51);}
+#divFooter a {color: rgb(254, 237, 1);}
 
 #divFooter h3 {color: rgb(180, 173, 173);}
 
@@ -287,7 +287,7 @@ h2 {font-weight: normal; font-style: normal; font-family: 'Open Sans'; font-size
 
 .breadcrumbs a {color: rgb(132, 164, 51); font-family: 'Open Sans', sans-serif;}
 
-#divHeaderLine1{letter-spacing: -1px; word-spacing: 0px; margin-top: 31px; color: rgb(142, 176, 55); font-size: 51px; line-height: 55px; font-family: Pacifico; text-transform: none; text-shadow: rgba(0, 0, 0, 0.14902) 0px 3px 5px, rgba(255, 255, 255, 0.298039) 0px -5px 35px; font-weight: normal; font-style: normal; text-align: left; opacity: 1; padding: 0px; background-image: none;}
+#divHeaderLine1{letter-spacing: -1px; word-spacing: 0px; margin-top: 31px; color: rgb(223, 0, 7); font-size: 51px; line-height: 55px; font-family: Pacifico; text-transform: none; text-shadow: rgba(0, 0, 0, 0.14902) 0px 3px 5px, rgba(255, 255, 255, 0.298039) 0px -5px 35px; font-weight: normal; font-style: normal; text-align: left; opacity: 1; padding: 0px; background-image: none;}
 
 #divHeaderLine2 {font-size: 21px; line-height: 27px; letter-spacing: 1px; margin-top: 12px; font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: rgb(0, 0, 0); text-shadow: rgba(0, 0, 0, 0.14902) 0px 3px 5px, rgba(255, 255, 255, 0.298039) 0px -5px 35px; text-align: left; font-weight: normal; font-style: italic; padding: 0px; opacity: 1; background-image: none; background-position: initial initial; background-repeat: initial initial;}
 
@@ -470,6 +470,10 @@ h6,.page-content h6 a {font-weight: normal; font-style: normal; font-family: 'Op
 
 }
 
-
-
-
+.modal-header {
+    background-color: #E00008;
+    color: rgb(254, 237, 1);
+}
+.modal-header h3{
+    font-weight: 300 !important;
+}
