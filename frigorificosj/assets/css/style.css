@@ -689,6 +689,10 @@ body {
     padding: 20px;
 }
 
+.img-clientes {
+    max-height: 300px;
+}
+
 /*----- Hover Effect Portfolio Image --------*/
 
 .project {
