@@ -1,0 +1,32 @@
+<div class="modal-content">
+    <div class="modal-header">
+      <a type="button" class="close btn-modal-close" aria-hidden="true" ng-click="ok()">
+        <img src="theme/images/btn-close.png" class="img-responsive" alt="" />
+      </a>
+      <h4 class="modal-title text-center" id="myModalLabel">LOGIN</h4>  
+    </div>
+    <div class="modal-body">
+        <div class="row">
+          <div class="alert alert-danger" role="alert" ng-show="errorLogin">
+            Invalid username and password combination
+          </div>
+        </div>
+        <div class="row">
+          <form class="registro" ng-submit="userLogin(userEmail, userPass);">
+            <div class="form-group">
+              <label for="exampleInputUser">Email</label>
+              <input type="email" class="form-control" id="exampleInputNameUser" ng-model="userEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputUser1">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassUser1" ng-model="userPass" pattern=".{6,}" required>
+            </div>
+            <div class="pull-left">
+              <!-- <a href="olvide-pass.html" class="btn-modal-olvide">Olvide contraseña</a> -->
+              <a href="javascript:void(0)" class="btn-modal-registrarse" ng-click="userGoToRegister();">Registrarse</a>
+            </div>
+            <button type="submit" class="btn btn-default pull-right">Ingresar</button>
+          </form>
+        </div>
+    </div>
+</div>

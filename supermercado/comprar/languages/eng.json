@@ -1,0 +1,55 @@
+{
+  "header":
+  {
+    "inputSearch" : "Search by genre, series or title",
+    "menu" : [
+      {
+        "title" : "Home",
+        "url" : "/"
+      },
+      {
+        "title" : "Titles",
+        "url" : "titles"
+      },
+      {
+        "title" : "Register",
+        "url" : "register"
+      }
+    ]
+  },
+  "search":
+  {
+    "inputSearch" : "Search by genre, series or title"
+  },
+  "home":
+  {
+    "resultsText" : "Results for",
+    "noResultsText" : "No results found",
+    "duration" : "Duration",
+    "series" : "Series",
+    "gender" : "Gender"
+  },
+  "tituloDetail":
+  {
+    "duration" : "Duration",
+    "series" : "Series",
+    "series_sinopsis" : "serie's synopsis",
+    "gender" : "Gender",
+    "season" : "Season",
+    "episode" : "Episode",
+    "subtitled" : "Subtitled",
+    "sinopsis" : "Synopsis",
+    "error" : "No title found, try again later..."
+  },
+  "register":
+  {
+    "title" : "In development",
+    "director" : "Director",
+    "country" : "Country",
+    "duration" : "Duration"
+  },
+  "login":
+  {
+
+  }
+}

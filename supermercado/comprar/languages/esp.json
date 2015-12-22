@@ -1,0 +1,55 @@
+{
+  "header":
+  {
+    "inputSearch" : "Buscar por género, serie o título",
+    "menu" : [
+      {
+        "title" : "Inicio",
+        "url" : "/"
+      },
+      {
+        "title" : "Titulos",
+        "url" : "/titles"
+      },
+      {
+        "title" : "Registro",
+        "url" : "/register"
+      }
+    ]
+  },
+  "search":
+  {
+    "inputSearch" : "Buscar por género, serie o título"
+  },
+  "home":
+  {
+    "resultsText" : "Resultados de",
+    "noResultsText" : "No se encontraron resultados",
+    "duration" : "Duración",
+    "series" : "Serie",
+    "gender" : "Género"
+  },
+  "tituloDetail":
+  {
+    "duration" : "Duración",
+    "series" : "Serie",
+    "series_sinopsis" : "Sinopsis de la serie",
+    "gender" : "Género",
+    "season" : "Temporada",
+    "episode" : "Capítulo",
+    "subtitled" : "Subtitulado",
+    "sinopsis" : "Sinopsis",
+    "error" : "No se encontro el título deseado, vuelva a intentarlo mas tarde..."
+  },
+  "register":
+  {
+    "title" : "Proyectos en desarrollo",
+    "director" : "Director",
+    "country" : "País",
+    "duration" : "Duración"
+  },
+  "login":
+  {
+
+  }
+}
