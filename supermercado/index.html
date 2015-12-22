@@ -10,6 +10,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -37,11 +38,11 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#imagenes">Im&aacute;genes</a></li>
+                        <li><a href="#ubicacion">Ubicaci&oacute;n</a></li>
+                        <li><a href="#diferencias">Aspectos diferenciales</a></li>
+                        <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,12 +50,15 @@
     </header><!--/#header-->
 
     <section id="main-slider" class="carousel">
-    <div><img src="images/logo.jpg"></div>
+    <div>
+        <img src="images/logo_bg.png" width="400"><br>
+        <span class="slogan">La mejor opci&oacute;n</span>
+    </div>
     </section><!--/#main-slider-->
 
-    <section id="services">
+    <section>
         <div class="container">
-            <div class="box first">
+            <div class="box first" id="nosotros">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="center">
@@ -73,7 +77,7 @@
         </div><!--/.container-->
     </section><!--/#services-->
 
-    <section id="portfolio">
+    <section id="imagenes">
         <div class="container">
             <div class="box">
                 <div class="center gap">
@@ -207,7 +211,7 @@
         </div><!--/.container-->
     </section><!--/#services-->
 
-    <section id="pricing">
+    <section id="ubicacion">
         <div class="container">
             <div class="box">
             <div class="center">
@@ -217,7 +221,7 @@
         </div>
     </section><!--/#pricing-->
 
-    <section id="about-us">
+    <section id="diferencias">
         <div class="container">
             <div class="box">
                 <div class="center">
@@ -244,68 +248,56 @@
             <div class="box last">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h1>Contact Form</h1>
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <h1>Contacto</h1>
+                        <p>Si desea comunicarse con nosotros complete el formulario a continuaci&oacute;n.</p>
                         <div class="status alert alert-success" style="display: none"></div>
                         <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Name">
+                                        <input type="text" class="form-control" required="required" placeholder="Nombre">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email address">
+                                        <input type="text" class="form-control" required="required" placeholder="Email">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+                                        <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Mensaje"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
+                                        <button type="submit" class="btn btn-danger btn-lg">Enviar</button>
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div><!--/.col-sm-6-->
                     <div class="col-sm-6">
-                        <h1>Our Address</h1>
+                        
                         <div class="row">
                             <div class="col-md-6">
+                                <h1>Direcci&oacute;n</h1>
                                 <address>
-                                    <strong>Twitter, Inc.</strong><br>
-                                    795 Folsom Ave, Suite 600<br>
-                                    San Francisco, CA 94107<br>
-                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                    <strong>Super N&aacute;poli.</strong><br>
+                                    Calle 123<br>
+                                    San Ju&aacute;n, Argentina<br>
+                                    Tel: (123) 456-7890
                                 </address>
                             </div>
                             <div class="col-md-6">
-                                <address>
-                                    <strong>Twitter, Inc.</strong><br>
-                                    795 Folsom Ave, Suite 600<br>
-                                    San Francisco, CA 94107<br>
-                                    <abbr title="Phone">P:</abbr> (123) 456-7890
-                                </address>
+                                <h1>Trabaj&aacute; con nosotros</h1>
+                                    <button class="btn btn-primary" data-toggle="modal" data-target="#trabaja">Click aqu&iacute;</button>
+                                </div>
                             </div>
-                        </div>
-                        <h1>Connect with us</h1>
+                        <h1>Redes sociales</h1>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <ul class="social">
-                                    <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
-                                    <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
-                                    <li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="social">
-                                    <li><a href="#"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>
-                                    <li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>
-                                    <li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>
+                                    <li><a target="_blank" href="https://www.facebook.com/Super-N%C3%A1poli-513131852194845/"><i class="icon-facebook icon-social"></i> Facebook</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -316,7 +308,7 @@
     </section><!--/#contact-->
 
     <footer id="footer">
-        <div class="container">
+        <div class="container hidden">
             <div class="row">
                 <div class="col-sm-6">
                     &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
@@ -327,6 +319,58 @@
             </div>
         </div>
     </footer><!--/#footer-->
+
+
+    <!-- Modal -->
+        <div class="modal fade modal-abajo" id="trabaja" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Trabaj&aacute; con nosotros</h4>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal" role="form" method="post" action="index.php">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" name="name" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="email" name="email" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile" class="col-sm-2 control-label">Curriculum</label>
+                        <div class="col-sm-10">
+                            <input type="file" id="exampleInputFile">
+                            <p class="help-block">Adjunte su CV.</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="col-sm-2 control-label">Mensaje</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="4" name="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <input id="submit" name="submit" type="submit" value="Enviar" class="btn btn-primary">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 col-sm-offset-2">
+                            <!-- ERRORES -->
+                        </div>
+                    </div>
+                  </form>             
+                </div>
+            </div>
+          </div>
+        </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

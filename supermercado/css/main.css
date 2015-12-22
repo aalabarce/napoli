@@ -55,7 +55,17 @@ a:focus {
   background-repeat: no-repeat;
   padding: 200px 0;
   color: #fff;
+  text-align: center;
 }
+
+#main-slider .slogan {
+  font-size: 40px;
+  color: #BF0411;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+
+
 #main-slider .item {
   -moz-transition: opacity ease-in-out 500ms;
   -o-transition: opacity ease-in-out 500ms;
@@ -239,6 +249,22 @@ a:focus {
     height: 400px;
 }
 
+.modal-abajo {
+    top: 60px !important;
+}
+
+#imagenes .box {
+  background-color: #f9f9f9;
+}
+
+#ubicacion .box {
+  background-color: #f9f9f9;
+}
+
+
+.trabaja-btn {
+    background-color: red;
+}
 .portfolio-item .overlay {
   position: absolute;
   top: 0;
