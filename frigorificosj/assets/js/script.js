@@ -116,7 +116,7 @@ $(document).ready(function () {
 
     var marker = new google.maps.Marker({
             position: new google.maps.LatLng(-31.5417266, -68.5114424),
-            title:"Boots4 Office"
+            title:"Frigorifico San Juan"
         });
 
         // To add the marker to the map, call setMap();
