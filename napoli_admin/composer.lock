@@ -1,0 +1,46 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "6ce187f48016d57a5075a7a882e5d3dc",
+    "content-hash": "07631944688ccdba8a744c34ede21b00",
+    "packages": [
+        {
+            "name": "phreeze/phreeze",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jasonhinkle/phreeze.git",
+                "reference": "5c10dcba0a25758a35d9eee8787c02c3dd634e4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jasonhinkle/phreeze/zipball/5c10dcba0a25758a35d9eee8787c02c3dd634e4b",
+                "reference": "5c10dcba0a25758a35d9eee8787c02c3dd634e4b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "description": "A lightweight ORM + MVC framework for PHP",
+            "time": "2015-10-23 04:23:31"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "phreeze/phreeze": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

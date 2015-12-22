@@ -1,0 +1,17 @@
+insert into rubro (nombre) values ('aderezos');
+insert into rubro (nombre) values ('almacen');
+insert into rubro (nombre) values ('bebidas');
+insert into rubro (nombre) values ('carniceria');
+insert into rubro (nombre) values ('congelados');
+insert into rubro (nombre) values ('conservas');
+insert into rubro (nombre) values ('copetin');
+insert into rubro (nombre) values ('fiambreria');
+insert into rubro (nombre) values ('golosinas');
+insert into rubro (nombre) values ('lacteos');
+insert into rubro (nombre) values ('mascotas');
+insert into rubro (nombre) values ('Panaderia');
+insert into rubro (nombre) values ('Pastas');
+insert into rubro (nombre) values ('Perfumeria y limpieza');
+insert into rubro (nombre) values ('Varios');
+insert into rubro (nombre) values ('Verduleria');
+
