@@ -55,7 +55,7 @@ angular.module('supermercadoNapoli', ['ngRoute', 'ui.bootstrap', 'supermercadoNa
 
       //if($location.path())
       if($location.host() == "walrussolutions.com") { // For production
-        $rootScope.serverURL = "/web"; // URL for real app
+        $rootScope.serverURL = "/napoli_admin"; // URL for real app
         $rootScope.imagesSrc = "/uploads";
       } else { // For development
         $rootScope.serverURL = "/web/app_dev.php"; // URL for working local
