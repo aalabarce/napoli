@@ -12,6 +12,10 @@ angular.module('supermercadoNapoliControllers', [])
   //Do something
 }])
 
+.controller('BuscarCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
+  //Do something
+}])
+
 .controller('CarritoCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
   //Do something
 }])

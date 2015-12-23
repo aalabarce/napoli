@@ -16,6 +16,10 @@ angular.module('supermercadoNapoli', ['ngRoute', 'ui.bootstrap', 'supermercadoNa
           templateUrl: 'templates/content.rubro.detail.html',
           controller: 'RubroDetailCtrl'
         }).
+        when('/buscar', {
+          templateUrl: 'templates/content.buscar.html',
+          controller: 'BuscarCtrl'
+        }).
         when('/carrito', {
           templateUrl: 'templates/content.carrito.html',
           controller: 'CarritoCtrl'
