@@ -114,6 +114,10 @@
 	pointer-events: none;
 }
 
+.mi-slider nav a:hover {
+	color: #B9222C;
+}
+
 .mi-slider nav a.mi-selected:after {
 	border-color: transparent;
 	border-top-color: #fff;
