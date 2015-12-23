@@ -4,7 +4,7 @@
 
 $(document).ready(function () {
 
-    $("#contactForm").submit(function(e){
+    /*$("#contactForm").submit(function(e){
 
         e.preventDefault();
         var $ = jQuery;
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         return false;
 
-    });
+    });*/
 });
 
 
