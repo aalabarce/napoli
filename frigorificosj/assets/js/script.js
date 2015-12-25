@@ -115,7 +115,7 @@ $(document).ready(function () {
     var map = new google.maps.Map(mapCanvas, mapOptions)
 
     var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-31.5417266, -68.5114424),
+            position: new google.maps.LatLng(-31.541787, -68.508673),
             title:"Frigorifico San Juan"
         });
 

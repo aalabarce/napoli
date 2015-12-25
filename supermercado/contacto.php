@@ -45,21 +45,21 @@
 	$message = $_POST['message'];
 	$from = $email;
 	$to = 'aj.alabarce@gmail.com';  // please change this email id
-	$subject = 'Contacto Frigorifico San Juan';
+	$subject = 'Contacto Super Napoli';
 	
 	$body = "De: $name\n E-Mail: $email\n Mensaje:\n $message";
 
 
 	//send the email
 	$result = '';
-	if (mail ($to, $subject, $body)) {
+	if ($a = mail ($to, $subject, $body)) {
 		/*$result .= '<div class="alert alert-success alert-dismissible" role="alert">';
  		$result .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
 		$result .= 'Thank You! I will be in touch';
 		$result .= '</div>';
 
 		echo $result;*/
-		echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/frigorificosj"</script>';
+		echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/supermercado"</script>';
 	}
 
 	$result = '';

@@ -351,6 +351,18 @@ a:focus {
   padding: 0;
   border-bottom: 1px solid #e1e1e1;
 }
+.welcome {
+    background: #eaeced;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    opacity: 0.9;
+    width: 44%;
+    margin: auto;
+}
+
+
+
+
 #pricing .plan li {
   padding: 10px 0;
   margin: 0 15px;

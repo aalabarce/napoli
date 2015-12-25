@@ -20,7 +20,7 @@ $email->AddAttachment( $file_to_attach , $_FILES['adjunto']['name'] );
 
 $email->Send();
 
-header('Location: http://www.walrussolutions.com/freskito');
+echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/freskito"</script>';
 die();
 
 ?>

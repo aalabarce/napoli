@@ -20,7 +20,6 @@ $email->AddAttachment( $file_to_attach , $_FILES['adjunto']['name'] );
 
 $email->Send();
 
-header('Location: http://www.walrussolutions.com/frigorifico_napoli');
-die();
+echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/frigorifico_napoli"</script>';
 
 ?>

@@ -59,8 +59,7 @@
 		$result .= '</div>';
 
 		echo $result;*/
-		header('Location: http://www.walrussolutions.com/freskito');
-		die();
+		echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/freskito"</script>';
 	}
 
 	$result = '';

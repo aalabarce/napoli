@@ -10,7 +10,7 @@ $message = $_POST['message'];
 $email = new PHPMailer();
 $email->From      = $_POST['email'];
 $email->FromName  = $_POST['name'];
-$email->Subject   = '[Trabaja con nosotros] Un Rincon De Napoli';
+$email->Subject   = '[Trabaja con nosotros] Super Napoli';
 $email->Body      = $message;
 $email->AddAddress( 'aj.alabarce@gmail.com' );
 
@@ -20,7 +20,7 @@ $email->AddAttachment( $file_to_attach , $_FILES['adjunto']['name'] );
 
 $email->Send();
 
-echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/restaurante"</script>';
+echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/supermercado"</script>';
 
 
 ?>

@@ -49,26 +49,26 @@
     </header><!--/#header-->
 
     <section id="main-slider" class="carousel">
-    <div>
-        <img src="images/logo_bg.png" width="400"><br>
+    <div class="welcome">
+        <img src="images/logo_bg.png" class="img-responsive" style="margin: auto" width="400"><br>
         <span class="slogan">La mejor opci&oacute;n</span>
     </div>
     </section><!--/#main-slider-->
 
     <section>
         <div class="container">
-            <div class="box first" id="nosotros">
+            <div class="box first" id="nosotros">&nbsp;
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="center">
-                            <h1><i class="fa-angle-double-right"></i><strong>Filosofia</strong></h1>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                            <h1><strong>Nuestra misi&oacute;n</strong></h1>
+                            <p>Somos un grupo empresario orientado a la gastronomía, con presencia interprovincial, apasionados en brindar un servicio personalizado con la mejor variedad de productos en la mayor amplitud horaria y al mejor precio posible.</p>
                         </div>
                     </div><!--/.col-md-4-->
                     <div class="col-md-6 col-sm-6">
                         <div class="center">
-                            <h1><strong>Sobre nosotros</strong></h1>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                            <h1><strong>Nuestra visi&oacute;n</strong></h1>
+                            <p>Sustentados en la calidad de nuestros servicios y amplia variedad de productos, logremos superar las expectativas de nuestros clientes en todo momento. </p>
                         </div>
                     </div><!--/.col-md-4-->
                 </div><!--/.row-->
@@ -188,7 +188,7 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="">
-                            <h3><i class="fa-angle-double-right"></i><strong>Medios de pago aceptados</strong></h3>
+                            <h3><i class="icon icon-credit-card"></i>&nbsp;<strong>Medios de pago aceptados</strong></h3>
                             <p>
                                 &nbsp;&nbsp;- Todas las tarjetas de débito y crédito (nacionales y provinciales)<br>
                                 &nbsp;&nbsp;- Efectivo<br>
@@ -197,7 +197,7 @@
                     </div><!--/.col-md-4-->
                     <div class="col-md-6 col-sm-6">
                         <div class="">
-                            <h3><strong>Horarios de atenci&oacute;n al p&uacute;blico</strong></h3>
+                            <h3><i class="icon icon-time"></i>&nbsp;<strong>Horarios de atenci&oacute;n al p&uacute;blico</strong></h3>
                             <p>
                                 &nbsp;&nbsp;- Domingos a Jueves: 7:00 am – 2:00 am<br>
                                 &nbsp;&nbsp;- Viernes y Sábados: 7:00 am – 3:00 am<br>
@@ -214,7 +214,9 @@
         <div class="container">
             <div class="box">
             <div class="center">
-                <h2>&nbsp;Ubicac&iacute;on</h2>
+                <div class="page-header">
+                  <h1>&nbsp;Ubicac&iacute;on <small>Rivadavia 175 (Oeste), San Ju&aacute;n Capital</small></h1>
+                </div>
                 <div id="map"></div>
             </div> 
         </div>
@@ -250,16 +252,16 @@
                         <h1>Contacto</h1>
                         <p>Si desea comunicarse con nosotros complete el formulario a continuaci&oacute;n.</p>
                         <div class="status alert alert-success" style="display: none"></div>
-                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="contacto.php" role="form">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Nombre">
+                                        <input type="text" name="name" class="form-control" required="required" placeholder="Nombre">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email">
+                                        <input type="email" name="email" class="form-control" required="required" placeholder="Email">
                                     </div>
                                 </div>
                             </div>
@@ -282,9 +284,11 @@
                                 <h1>Direcci&oacute;n</h1>
                                 <address>
                                     <strong>Super N&aacute;poli.</strong><br>
-                                    Calle 123<br>
-                                    San Ju&aacute;n, Argentina<br>
-                                    Tel: (123) 456-7890
+                                    Rivadavia 175 (Oeste)<br>
+                                    San Ju&aacute;n, San Ju&aacute;n<br>
+                                    Tel: (0264) 4227221<br>
+                                    Tel: (0264) 4223241<br>
+                                    Tel: (0264) 155278021<br>
                                 </address>
                             </div>
                             <div class="col-md-6">
