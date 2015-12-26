@@ -1,7 +1,34 @@
 <div class="container">
-    <br />
-    <br />
-    <br />
-    <br />
-    <h1>Rubro {{rubroId}} </h1>
-</div>
+	<br />
+    <div class="box">
+        <div class="center gap">
+            <h2>Rubro {{idRubro}}</h2>
+            <p class="lead">Seleccione el rubro para filtrar los productos o busque un producto por nombre en el buscador de arriba.</p>
+        </div><!--/.center-->
+
+        <div class="row">
+    	  	<table class="table table-hover">
+			    <thead>
+			      <tr>
+			        <th>Producto</th>
+			        <th>Unidad de medida (gramos o mm)</th>
+			        <th>Unidades por producto</th>
+			        <th>Cantidad</th>
+			        <th>Comprar</th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr ng-repeat="producto in productos">
+			        <td>{{producto.descripcion}}</td>
+			        <td>{{producto.unidadMedida}}</td>
+			        <td>{{producto.uxb}}</td>
+			        <td style="width: 7%;">
+			        	<input type="number" class="form-control" id="cantidad" value="1">
+  					</td>
+
+  					<td><i class="icon-shopping-cart"></i></td>
+			      </tr>
+			    </tbody>
+  			</table>
+        </div>   
+    </div><!--/.box-->

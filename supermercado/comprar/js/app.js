@@ -61,4 +61,22 @@ angular.module('supermercadoNapoli', ['ngRoute', 'ui.bootstrap', 'supermercadoNa
         $rootScope.serverURL = "/web/app_dev.php"; // URL for working local
         $rootScope.imagesSrc = "/web/uploads/";
       }
+
+      $rootScope.addToCart = function(id, codProveedor, descripcion, unidadMedida, uxb, rubro, unidades) {
+          //localStorage.setItem(id, JSON.stringify(newProdcut));
+          //var newProdcut = {"id": "' + id +'", "codProveedor": "' + codProveedor + '", "descripcion": "' + descripcion + '", "unidadMedida": "' + unidadMedida + '", "uxb": "' + uxb + '", "rubro": "' + rubro + '"};
+          if(localStorage["cart"]) {
+              var cart = JSON.parse(localStorage["cart"]);
+          } else {
+              var cart = [];
+          }
+            var newProdcut = {"id": id, "codProveedor": codProveedor, "descripcion": descripcion, "unidadMedida": unidadMedida, "uxb": uxb, "rubro": rubro, "unidades": unidades};
+            cart.push(newProdcut);
+            localStorage["cart"] = JSON.stringify(cart);
+
+            var retrievedObject = JSON.parse(localStorage["cart"]);
+        console.log('retrievedObject: ', retrievedObject);
+
+      };
+
     }]);
