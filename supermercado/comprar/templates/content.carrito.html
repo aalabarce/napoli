@@ -15,6 +15,7 @@
 			        <th>Unidad de medida (gramos o mm)</th>
 			        <th>Unidades por producto</th>
 			        <th>Editar Cantidad</th>
+			        <th>Actualizar cantidad</th>
 			        <th>Eliminar</th>
 			      </tr>
 			    </thead>
@@ -25,14 +26,14 @@
 			        <td>{{producto.unidadMedida}}</td>
 			        <td>{{producto.uxb}}</td>
 			        <td style="width: 7%;">
-			        	<input type="number" class="form-control" id="cantidad" value="{{producto.unidades}}">
+			        	<input type="number" class="form-control" id="cantidad{{$index}}" ng-value="{{producto.unidades}}">
   					</td>
-
+  					<td><a ng-click="updateCart($index)"><i class="icon-save"></i></a></td>
   					<td><a ng-click="deleteFromCart($index)"><i class="icon-trash"></i></a></td>
 			      </tr>
 			    </tbody>
   			</table>
-  			<button class="btn btn-success btn-lg">Enviar</button>
+  			<button class="btn btn-default btn-lg" ng-click="goToCheckout()">Enviar</button>
         </div>   
     </div><!--/.box-->
 </div><!--/.container-->

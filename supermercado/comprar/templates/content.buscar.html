@@ -25,10 +25,10 @@
 			        <td>{{producto.unidadMedida}}</td>
 			        <td>{{producto.uxb}}</td>
 			        <td style="width: 7%;">
-			        	<input type="number" class="form-control" id="cantidad" value="1">
+			        	<input type="number" class="form-control" id="cantidad{{producto.id}}" value="1">
   					</td>
 
-  					<td><i class="icon-shopping-cart"></i></td>
+  					<td><a ng-click="buyProduct(producto.id)"><i class="icon-shopping-cart" ></i></a></td>
 			      </tr>
 			    </tbody>
   			</table>

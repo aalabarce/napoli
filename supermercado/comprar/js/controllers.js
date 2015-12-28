@@ -59,6 +59,16 @@ angular.module('supermercadoNapoliControllers', [])
   $scope.getAllRubros();
   // ***** END API *****
 
+  $scope.buyProduct = function (id) {
+  	var cantidadEsteProducto = document.getElementById('cantidad' + id).value;
+    for(var i=0;i<$scope.productos.length;i++){
+    	if($scope.productos[i].id == id){
+        	$rootScope.addToCart($scope.productos[i].id, $scope.productos[i].codProveedor, $scope.productos[i].descripcion, $scope.productos[i].unidadMedida, $scope.productos[i].uxb, $scope.productos[i].rubro, cantidadEsteProducto);
+        	break;
+    	}
+    }
+  }
+
 }])
 
 .controller('BuscarCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
@@ -108,18 +118,37 @@ angular.module('supermercadoNapoliControllers', [])
     }
   }
   // ***** END API *****
-  
-  $rootScope.addToCart("3630", "17665", "300b4D MEGATUBE QUESO", "88", "1", "7", "4");
+
+  $scope.buyProduct = function (id) {
+  	var cantidadEsteProducto = document.getElementById('cantidad' + id).value;;
+    for(var i=0;i<$scope.filterProducts.length;i++){
+    	if($scope.filterProducts[i].id == id){
+        	$rootScope.addToCart($scope.filterProducts[i].id, $scope.filterProducts[i].codProveedor, $scope.filterProducts[i].descripcion, $scope.filterProducts[i].unidadMedida, $scope.filterProducts[i].uxb, $scope.filterProducts[i].rubro, cantidadEsteProducto);
+        	break;
+    	}
+    }
+  }
 
 }])
 
 .controller('CarritoCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
   //Do something
   $scope.saveCart = JSON.parse(localStorage["cart"]);
+  
   $scope.deleteFromCart = function (index) {
   	//alert(index);
 	$scope.saveCart.splice(index, 1);
 	localStorage["cart"] = JSON.stringify($scope.saveCart);
+  }
+
+  $scope.updateCart = function (index) {
+  	var newCantidad = document.getElementById('cantidad' + index).value;
+	$scope.saveCart[index].unidades = newCantidad;
+	localStorage["cart"] = JSON.stringify($scope.saveCart);
+  }
+
+  $scope.goToCheckout = function () {
+  	$location.path("/checkout").replace();
   }
 
 }])
@@ -150,6 +179,10 @@ angular.module('supermercadoNapoliControllers', [])
 	*/
   $scope.cancelSearch = function() {
     $rootScope.searchInputText = "";
+  }
+
+  $scope.goToCarrito = function () {
+  	$location.path("/carrito").replace();
   }
 
 }])
