@@ -639,3 +639,16 @@ textarea#message {
     -o-transform: scale(1);
   }
 }
+
+.addToCart {
+  text-align: center;
+  cursor: pointer;
+  &:active {
+    animation: vibrate 0.2s infinite;
+  }
+}
+
+@keyframes vibrate {
+  50% { transform: rotate(1deg) translateX(1px); }
+  100% { transform: rotate(-1deg) translateX(-1px); }
+}

@@ -53,7 +53,7 @@
                       </div><!-- /.col-lg-6 -->
                       <div class="col-lg-1 right" style="float: right; ">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#/carrito"><i class="icon-shopping-cart" ng-click="goToCarrito()"></i></a></li>
+                            <li class="active" ng-click="goToCarrito()"><a href="#"><i class="icon-shopping-cart"></i></a></li>
                         </ul>
                       </div>
                     </div>
@@ -80,6 +80,43 @@
             </div>
         </div>
     </footer><!--/#footer-->
+
+
+    <!-- Modal Add to cart-->
+      <div class="modal fade" id="modalAddToCart" role="dialog">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="modal-dialog">
+        
+            <div class="alert alert-success">
+                <!--<a href="javascript:void(0);" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
+                <strong>Felicitaciones!</strong> Has agregado este item a tu carrito.
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Modal Actualizar cart-->
+      <div class="modal fade" id="modalActualizarCart" role="dialog">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="modal-dialog">
+        
+            <div class="alert alert-info">
+                <!--<a href="javascript:void(0);" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
+                <strong>Felicitaciones!</strong> Has actualizado tu carrito.
+            </div>
+          
+        </div>
+      </div>
 
     <script src="theme/js/jquery.js"></script>
     <script src="theme/js/bootstrap.min.js"></script>

@@ -48,11 +48,8 @@ angular.module('supermercadoNapoli', ['ngRoute', 'ui.bootstrap', 'supermercadoNa
         */
     }])
 
-    .run(['$rootScope', '$location', function($rootScope, $location) {
+    .run(['$rootScope', '$location', '$http', function($rootScope, $location, $http) {
       
-      // Declare user name
-      $rootScope.userName = window.localStorage['user_name'];
-
       //if($location.path())
       if($location.host() == "walrussolutions.com") { // For production
         $rootScope.serverURL = "/napoli_admin"; // URL for real app
@@ -61,6 +58,23 @@ angular.module('supermercadoNapoli', ['ngRoute', 'ui.bootstrap', 'supermercadoNa
         $rootScope.serverURL = "/web/app_dev.php"; // URL for working local
         $rootScope.imagesSrc = "/web/uploads/";
       }
+
+      $rootScope.getAllRubrosFromAPI = function() {
+        $http({
+            method: 'GET',
+            url: $rootScope.serverURL + "/api/rubros"
+        })
+        .success(function(data, status){
+
+            // Save the result in var
+            $rootScope.allRubros = data.rows;
+
+        })
+        .error(function(data, status){
+            console.log(data, status); //remove for production
+        });
+      }
+      $rootScope.getAllRubrosFromAPI();
 
       $rootScope.addToCart = function(id, codProveedor, descripcion, unidadMedida, uxb, rubro, unidades) {
           //localStorage.setItem(id, JSON.stringify(newProdcut));

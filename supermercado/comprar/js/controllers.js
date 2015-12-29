@@ -38,6 +38,7 @@ angular.module('supermercadoNapoliControllers', [])
   
   // ***** START API ***** Get all Rubros for filter
   $scope.getAllRubros = function() {
+  $scope.showPreloader = true; // Show preloader gif
     $http({
         method: 'GET',
         url: $rootScope.serverURL + "/api/productos?rubro=" + $scope.idRubro
@@ -48,11 +49,13 @@ angular.module('supermercadoNapoliControllers', [])
         //data.unshift({'nombre': 'Todos', 'id': 'all'});
         
         // Save the result in var
+        $scope.showPreloader = false; // Hide preloader gif
         $scope.productos = data.rows;
 
         console.log($scope.productos[0].descripcion, status);  //remove for production
     })
     .error(function(data, status){
+    	$scope.showPreloader = false; // Hide preloader gif
         console.log(data, status); //remove for production
     });
   }
@@ -68,6 +71,20 @@ angular.module('supermercadoNapoliControllers', [])
     	}
     }
   }
+
+  $scope.getRubrofromID = function(id) {
+
+
+	for(var i=0;i<$rootScope.allRubros.length;i++){
+	  if($rootScope.allRubros[i].id == id){
+	    $scope.nameRubro = $rootScope.allRubros[i].nombre;
+	    break;
+	  }
+	}
+
+  }
+
+  $scope.getRubrofromID($scope.idRubro);
 
 }])
 
@@ -129,6 +146,18 @@ angular.module('supermercadoNapoliControllers', [])
     }
   }
 
+  $scope.getRubrofromID = function(id) {
+
+
+	for(var i=0;i<$rootScope.allRubros.length;i++){
+	  if($rootScope.allRubros[i].id == id){
+	    return $rootScope.allRubros[i].nombre;
+	    break;
+	  }
+	}
+
+  }
+
 }])
 
 .controller('CarritoCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
@@ -151,10 +180,52 @@ angular.module('supermercadoNapoliControllers', [])
   	$location.path("/checkout").replace();
   }
 
+
+  $scope.getRubrofromID = function(id) {
+
+
+	for(var i=0;i<$rootScope.allRubros.length;i++){
+	  if($rootScope.allRubros[i].id == id){
+	    return $rootScope.allRubros[i].nombre;
+	    break;
+	  }
+	}
+
+  }
+  
 }])
 
 .controller('CheckoutCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
   //Do something
+  $scope.sendPedido = function () {
+  	$scope.name = document.getElementById('nameForm').value;
+  	$scope.email = document.getElementById('emailForm').value;
+  	$scope.tel = document.getElementById('telForm').value;
+  	$scope.direc = document.getElementById('direcForm').value;
+
+  	document.getElementById('pedidoForm').value = JSON.parse(localStorage["cart"]);
+  	$scope.pedido = document.getElementById('pedidoForm').value;
+
+
+  	var postData = { 'name': $scope.name, 'email': $scope.email, 'tel': $scope.tel, 'direc': $scope.direc, 'pedido': $scope.pedido };
+	
+	/*  	
+  	$http({
+		method  : 'POST',
+		url     : 'contacto.php',
+		data    : postData,
+		headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
+    }).success(function(data){
+    	console.log(data);
+  	}).error(function(data, status){
+        console.log(data, status); //remove for production
+    });
+    */
+
+    $http.post('contacto.php', postData) .success(function(data) { });
+
+  }
+
 }])
 
 .controller('HeaderCtrl', ['$scope', '$http', '$rootScope', '$modal', '$location', '$routeParams', function($scope, $http, $rootScope, $modal, $location, $routeParams) {

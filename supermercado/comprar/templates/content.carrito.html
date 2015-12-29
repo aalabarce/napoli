@@ -3,11 +3,16 @@
     <div class="box">
         <div class="center gap">
             <h2>Tu carrito de compras</h2>
-            <p class="lead">Seleccione el rubro para filtrar los productos o busque un producto por nombre en el buscador de arriba.</p>
+            <p class="lead">Cuado haya terminado, oprima "Enviar". Deberá completar un formulario para que nos contactaremos con usted. De esta forma, pasaremos el precio y confirmaremos el envio de su pedido. Gracias!</p>
         </div><!--/.center-->
 
         <div class="row">
-    	  	<table class="table table-hover">
+
+	        <div class="center gap" ng-hide="saveCart.length > 0">
+	            <p class="lead">Tu carrito de compras esta vacío.</p>
+	        </div><!--/.center-->
+
+    	  	<table class="table table-hover" ng-show="saveCart.length > 0">
 			    <thead>
 			      <tr>
 			      	<th>Producto</th>
@@ -22,18 +27,18 @@
 			    <tbody>
 			      <tr ng-repeat="producto in saveCart">
 			        <td>{{producto.descripcion}}</td>
-			        <td>{{producto.rubro}}</td>
+			        <td>{{getRubrofromID(producto.rubro)}}</td>
 			        <td>{{producto.unidadMedida}}</td>
 			        <td>{{producto.uxb}}</td>
 			        <td style="width: 7%;">
 			        	<input type="number" class="form-control" id="cantidad{{$index}}" ng-value="{{producto.unidades}}">
   					</td>
-  					<td><a ng-click="updateCart($index)"><i class="icon-save"></i></a></td>
-  					<td><a ng-click="deleteFromCart($index)"><i class="icon-trash"></i></a></td>
+  					<td><a ng-click="updateCart($index)" data-toggle="modal" data-target="#modalActualizarCart"><i class="icon-save addToCart"></i></a></td>
+  					<td><a ng-click="deleteFromCart($index)"><i class="icon-trash addToCart"></i></a></td>
 			      </tr>
 			    </tbody>
   			</table>
-  			<button class="btn btn-default btn-lg" ng-click="goToCheckout()">Enviar</button>
+  			<button class="btn btn-default btn-lg" ng-click="goToCheckout()" ng-show="saveCart.length > 0">Enviar</button>
         </div>   
     </div><!--/.box-->
 </div><!--/.container-->
