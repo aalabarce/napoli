@@ -12,7 +12,7 @@ $email->From      = $_POST['email'];
 $email->FromName  = $_POST['name'];
 $email->Subject   = '[Trabaja con nosotros] Frigorifico Napoli';
 $email->Body      = $message;
-$email->AddAddress( 'aj.alabarce@gmail.com' );
+$email->AddAddress( 'administracion@frigorificosj.com.ar' );
 
 $file_to_attach = $_FILES['adjunto']['tmp_name'];
 

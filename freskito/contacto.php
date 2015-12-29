@@ -44,7 +44,7 @@
 	$email = $_POST['email'];
 	$message = $_POST['message'];
 	$from = $email;
-	$to = 'aj.alabarce@gmail.com';  // please change this email id
+	$to = 'administracion@frigorificosj.com.ar';  // please change this email id
 	$subject = 'Contacto Hielo Freskito';
 	
 	$body = "De: $name\n E-Mail: $email\n Mensaje:\n $message";
