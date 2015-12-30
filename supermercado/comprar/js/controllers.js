@@ -30,6 +30,12 @@ angular.module('supermercadoNapoliControllers', [])
   }
   $scope.getAllRubros();
   // ***** END API *****
+
+  //Si el usuario envio el pedido, es redirigido a Home con un parametro en la URL. Si llega ese parametro, eliminar el carrito.
+  if($routeParams.form) {
+  	localStorage["cart"].clear(); //Vacio el carrito
+  }
+
 }])
 
 .controller('RubroDetailCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
@@ -197,32 +203,43 @@ angular.module('supermercadoNapoliControllers', [])
 
 .controller('CheckoutCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
   //Do something
+
+  $scope.getRubrofromID = function(id) {
+	for(var i=0;i<$rootScope.allRubros.length;i++){
+	  if($rootScope.allRubros[i].id == id){
+	    return $rootScope.allRubros[i].nombre;
+	    break;
+	  }
+	}
+  }
+
   $scope.sendPedido = function () {
-  	$scope.name = document.getElementById('nameForm').value;
-  	$scope.email = document.getElementById('emailForm').value;
-  	$scope.tel = document.getElementById('telForm').value;
-  	$scope.direc = document.getElementById('direcForm').value;
+  	//$scope.name = document.getElementById('nameForm').value;
+  	//$scope.email = document.getElementById('emailForm').value;
+  	//$scope.tel = document.getElementById('telForm').value;
+  	//$scope.direc = document.getElementById('direcForm').value;
 
-  	document.getElementById('pedidoForm').value = JSON.parse(localStorage["cart"]);
-  	$scope.pedido = document.getElementById('pedidoForm').value;
+  	$scope.sendCart = JSON.parse(localStorage["cart"]);
+  	$scope.htmlCart = "<br /><br /><table><thead><tr><th>ID</th><th>Codigo Proveedor</th><th>Descripcion</th><th>Unidad de medida</th><th>uxb</th><th>Rubro</th><th>Cantidad</th></tr></thead>";
+    $scope.htmlCart += "<tbody>"
+    for(var i=0;i<$scope.sendCart.length;i++){
+
+    	var rubroName = $scope.getRubrofromID($scope.sendCart[i].id);
+
+		$scope.htmlCart += "<tr><td>" + $scope.sendCart[i].id + "</td><td>" + $scope.sendCart[i].codProveedor + "</td><td>" + $scope.sendCart[i].descripcion + "</td><td>" + $scope.sendCart[i].unidadMedida + "</td><td>" + $scope.sendCart[i].uxb + "</td><td>" + rubroName + "</td><td>" + $scope.sendCart[i].unidades + "</td></tr>";
+    }
+
+ 	$scope.hrmlCart += "</tbody></table>"
+  	//var table = "<table><thead><tr><th>ID</th><th>Codigo Proveedor</th><th>Descripcion</th><th>Unidad de medida</th><th>uxb</th><th>Rubro</th><th>Cantidad</th></tr></thead>";
+
+  	document.getElementById('pedidoForm').value = $sce.trustAsHtml($scope.htmlCart);
+  	//$scope.pedido = document.getElementById('pedidoForm').value;
 
 
-  	var postData = { 'name': $scope.name, 'email': $scope.email, 'tel': $scope.tel, 'direc': $scope.direc, 'pedido': $scope.pedido };
+  	//var postData = { 'nameForm': $scope.name, 'emailForm': $scope.email, 'telForm': $scope.tel, 'direcForm': $scope.direc, 'pedidoForm': $scope.pedido };
 	
-	/*  	
-  	$http({
-		method  : 'POST',
-		url     : 'contacto.php',
-		data    : postData,
-		headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
-    }).success(function(data){
-    	console.log(data);
-  	}).error(function(data, status){
-        console.log(data, status); //remove for production
-    });
-    */
 
-    $http.post('contacto.php', postData) .success(function(data) { });
+    //$http.post('contacto.php', postData) .success(function(data) { });
 
   }
 

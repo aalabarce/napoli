@@ -55,8 +55,8 @@ angular.module('supermercadoNapoli', ['ngRoute', 'ui.bootstrap', 'supermercadoNa
         $rootScope.serverURL = "/napoli_admin"; // URL for real app
         $rootScope.imagesSrc = "/uploads";
       } else { // For development
-        $rootScope.serverURL = "/web/app_dev.php"; // URL for working local
-        $rootScope.imagesSrc = "/web/uploads/";
+        $rootScope.serverURL = "/napoli_admin"; // URL for working local
+        $rootScope.imagesSrc = "/uploads";
       }
 
       $rootScope.getAllRubrosFromAPI = function() {
