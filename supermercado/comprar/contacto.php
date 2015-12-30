@@ -56,7 +56,7 @@
 	$direc = $_POST['direcForm'];
 	$pedido = $_POST['pedidoForm'];
 	$from = $email;
-	$to = 'martohaiek@gmail.com';  // please change this email id
+	$to = 'aj.alabarce@gmail.com';  // please change this email id
 	$subject = 'Nuevo pedido';
 	
 	$body = "De: $name<br /> E-Mail: $email<br /> Teléfono: $tel<br /> Dirección: $direc<br /> $pedido";
