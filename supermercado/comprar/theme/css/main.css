@@ -643,9 +643,18 @@ textarea#message {
 .addToCart {
   text-align: center;
   cursor: pointer;
+  font-size: 25px !important;
   &:active {
     animation: vibrate 0.2s infinite;
   }
+}
+
+th, td {
+  text-align: center;
+}
+
+h2 {
+  color: #CE1E21;
 }
 
 @keyframes vibrate {

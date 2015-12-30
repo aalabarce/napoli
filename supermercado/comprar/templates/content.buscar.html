@@ -2,7 +2,7 @@
 	<br />
     <div class="box">
         <div class="center gap">
-            <h2>Resultados de "{{searchBuscador}}"</h2>
+            <h2 style="margin-bottom: 0px;">Resultados de "{{searchBuscador}}"</h2>
             <!--<p class="lead">Seleccione el rubro para filtrar los productos o busque un producto por nombre en el buscador de arriba.</p>-->
         </div><!--/.center-->
 
@@ -27,7 +27,7 @@
 			      	<th>Producto</th>
 			        <th>Rubro</th>
 			        <th>Unidad de medida (gramos o mm)</th>
-			        <th>Unidades por producto</th>
+			        <!--<th>Unidades por producto</th>-->
 			        <th>Cantidad</th>
 			        <th>Comprar</th>
 			      </tr>
@@ -37,7 +37,7 @@
 			        <td>{{producto.descripcion}}</td>
 			        <td>{{getRubrofromID(producto.rubro)}}</td>
 			        <td>{{producto.unidadMedida}}</td>
-			        <td>{{producto.uxb}}</td>
+			        <!--<td>{{producto.uxb}}</td>-->
 			        <td style="width: 7%;">
 			        	<input type="number" class="form-control" id="cantidad{{producto.id}}" value="1">
   					</td>

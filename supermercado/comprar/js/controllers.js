@@ -36,6 +36,10 @@ angular.module('supermercadoNapoliControllers', [])
   	localStorage["cart"].clear(); //Vacio el carrito
   }
 
+  /*$scope.goToRubro = function(id) {
+  	$location.path("/rubro/" + id).replace();
+  }*/
+
 }])
 
 .controller('RubroDetailCtrl', ['$scope', '$routeParams', '$http', '$rootScope', '$location', '$sce', function($scope, $routeParams, $http, $rootScope, $location, $sce) {
