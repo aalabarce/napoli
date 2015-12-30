@@ -67,7 +67,7 @@
 								</ul>
 								</li>
 							</ul>
-							<ul class="nav pull-right">
+							<ul class="nav pull-right hidden">
 								<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-lock"></i> Login <i class="caret"></i></a>
 								<ul class="dropdown-menu">

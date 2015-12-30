@@ -269,7 +269,7 @@ var page = {
 			wait: true,
 			success: function(){
 				$('#rubroDetailDialog').modal('hide');
-				setTimeout("app.appendAlert('Rubro was sucessfully " + (isNew ? "inserted" : "updated") + "','alert-success',3000,'collectionAlert')",500);
+				setTimeout("app.appendAlert('Rubro was sucessfully " + (isNew ? "agregado" : "actualizado") + " exitosamente','alert-success',3000,'collectionAlert')",500);
 				app.hideProgress('modelLoader');
 
 				// if the collection was initally new then we need to add it to the collection now
@@ -316,7 +316,7 @@ var page = {
 			wait: true,
 			success: function(){
 				$('#rubroDetailDialog').modal('hide');
-				setTimeout("app.appendAlert('The Rubro record was deleted','alert-success',3000,'collectionAlert')",500);
+				setTimeout("app.appendAlert('El Rubro fue eliminado','alert-success',3000,'collectionAlert')",500);
 				app.hideProgress('modelLoader');
 
 				if (model.reloadCollectionOnModelUpdate) {

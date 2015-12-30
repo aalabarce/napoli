@@ -299,7 +299,7 @@ var page = {
 			wait: true,
 			success: function(){
 				$('#productoDetailDialog').modal('hide');
-				setTimeout("app.appendAlert('Producto was sucessfully " + (isNew ? "inserted" : "updated") + "','alert-success',3000,'collectionAlert')",500);
+				setTimeout("app.appendAlert('Producto fue " + (isNew ? "agregado" : "actualizado") + " exitosamente','alert-success',3000,'collectionAlert')",500);
 				app.hideProgress('modelLoader');
 
 				// if the collection was initally new then we need to add it to the collection now
@@ -346,7 +346,7 @@ var page = {
 			wait: true,
 			success: function(){
 				$('#productoDetailDialog').modal('hide');
-				setTimeout("app.appendAlert('The Producto record was deleted','alert-success',3000,'collectionAlert')",500);
+				setTimeout("app.appendAlert('El Producto fue eliminado','alert-success',3000,'collectionAlert')",500);
 				app.hideProgress('modelLoader');
 
 				if (model.reloadCollectionOnModelUpdate) {
