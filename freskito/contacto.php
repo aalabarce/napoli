@@ -59,7 +59,7 @@
 		$result .= '</div>';
 
 		echo $result;*/
-		echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/freskito"</script>';
+		echo '<script>alert("Su mensaje ha sido enviado");location.href="http://frigorificosj.com.ar/freskito"</script>';
 	}
 
 	$result = '';

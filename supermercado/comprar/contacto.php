@@ -73,7 +73,7 @@
 		$result .= '</div>';
 
 		echo $result;*/
-		echo '<script>alert("Su pedido ha sido enviado. Muchas Gracias!!");location.href="http://www.walrussolutions.com/supermercado/comprar/#/?form=success"</script>';
+		echo '<script>alert("Su pedido ha sido enviado. Muchas Gracias!!");location.href="http://www.supernapoli.com.ar/supermercado/comprar/#/?form=success"</script>';
 	}
 
 	/*

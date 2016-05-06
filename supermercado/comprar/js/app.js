@@ -51,7 +51,7 @@ angular.module('supermercadoNapoli', ['ngRoute', 'ui.bootstrap', 'supermercadoNa
     .run(['$rootScope', '$location', '$http', function($rootScope, $location, $http) {
       
       //if($location.path())
-      if($location.host() == "walrussolutions.com") { // For production
+      if($location.host() == "supernapoli.com.ar") { // For production
         $rootScope.serverURL = "/napoli_admin"; // URL for real app
         $rootScope.imagesSrc = "/uploads";
       } else { // For development

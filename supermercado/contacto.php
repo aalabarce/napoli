@@ -59,7 +59,7 @@
 		$result .= '</div>';
 
 		echo $result;*/
-		echo '<script>alert("Su mensaje ha sido enviado");location.href="http://www.walrussolutions.com/supermercado"</script>';
+		echo '<script>alert("Su mensaje ha sido enviado");location.href="http://supernapoli.com.ar/supermercado"</script>';
 	}
 
 	$result = '';
